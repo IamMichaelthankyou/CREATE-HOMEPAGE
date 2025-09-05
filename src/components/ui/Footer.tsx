@@ -1,5 +1,6 @@
 "use client"
-
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 export default function Footer({ className = "" }: { className?: string }) {
   return (
   <footer className={`bg-black backdrop-blur-sm text-white relative z-10 ${className}`}>
@@ -25,9 +26,9 @@ export default function Footer({ className = "" }: { className?: string }) {
 function FooterNavItem({ href, text }: { href: string; text: string }) {
   return (
     <li>
-      <a href={href} className="hover:text-gray-300 font-mono transition-colors">
+      <Link href={href} className="hover:text-gray-300 font-mono transition-colors">
         {text}
-      </a>
+      </Link>
     </li>
   )
 }

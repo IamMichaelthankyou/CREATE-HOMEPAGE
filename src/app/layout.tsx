@@ -1,7 +1,6 @@
-
 import "./globals.css"
 import { Inter, Poppins, Montserrat } from "next/font/google"
-import type React from "react"
+import { AnimationLayout } from './anim'
 
 const inter = Inter({subsets:["latin"], variable:"--font-inter"})
 const poppins = Poppins({ weight: ["400","600"], subsets:["latin"], variable:"--font-poppins"})
@@ -15,7 +14,9 @@ export default function RootLayout({
     return (
         <html lang="ja" className={`${inter.variable} ${poppins.variable} ${montserrat.variable}`}>
             <body>
-                {children}
+                <AnimationLayout>
+                    {children}
+                </AnimationLayout>
             </body>
         </html>
     )
