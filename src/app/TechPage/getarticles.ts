@@ -23,5 +23,6 @@ export async function getarticles() {
     } catch (error) {
         console.error("Error in getarticles:", error);
         return [];
+
     }
 }
